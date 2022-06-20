@@ -1,5 +1,7 @@
 let btnAdd = document.querySelector('#btn-add');
+let btnDownload = document.querySelector('#btn-download');
 let timelineGroup = document.querySelector('.timeline__card--group');
+let titleTimeline = document.querySelector('.timeline__title');
 
 btnAdd.addEventListener('click', ()=> {
     timelineGroup.innerHTML += `
@@ -28,4 +30,25 @@ btnAdd.addEventListener('click', ()=> {
 function remove() {
     var element = document.getElementById("delete");
     element.remove();
-  }
+}
+
+btnDownload.addEventListener('click', capture)
+
+function capture() {
+    const captureElement = document.querySelector('#timeline__content')
+    html2canvas(captureElement)
+        .then(canvas => {
+            canvas.style.display = 'none'
+            document.body.appendChild(canvas)
+            return canvas
+        })
+        .then(canvas => {
+            const image = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream')
+            canvas.style.backgroundColor = 'red'
+            const a = document.createElement('a')
+            a.setAttribute('download', `${titleTimeline.textContent} - Línea del tiempo.png`)
+            a.setAttribute('href', image)
+            a.click()
+            canvas.remove()
+        })
+}

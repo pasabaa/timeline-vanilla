@@ -81,6 +81,7 @@ body {
 
 .timeline__card {
     position: relative;
+    height: 50%;
     min-width: 12rem;
 }
 
@@ -104,7 +105,7 @@ body {
     border-radius: 16rem;
 }
 
-.timeline__content {
+#timeline__content {
     overflow: scroll;
     overflow-y: hidden;
 }
