@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timeline Vanilla - pasabaa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- other links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#0d6efd">
+    <meta name="theme-color" content="#0d6efd">
+    <link rel="canonical" href="https://pasabaa.github.io/timeline-vanilla/">
+
+    <script src="js/app.js" defer></script>
+    <script src="js/theme-dark.js" defer></script>
+</head>
+
+<body data-theme="light">
+    <div class="container">
+        <div class="row min-vh-100 align-items-center justify-content-center">
+            <div class="col-lg-10 col-12">
+                <div class="card p-4 bg-primary-variant border-0">
+                    <div class="row">
+                        <div class="col-4 p-4">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h1 class="fw-bold">Home</h1>
+                                <button type="button" class="btn btn-sm" data-bs-toggle="modal" data-bs-target="#settings"><i class="bi bi-three-dots"></i></button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="settings" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-sm modal-dialog-centered">
+                                    <div class="modal-content border-0">
+                                        <div class="modal-header border-0 text-bg-primary">
+                                        <h5 class="modal-title fw-bold m-0">Settings</h5>
+                                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button>
+                                        </div>
+                                        <div class="modal-body py-3 bg-primary-variant">
+                                            <ul class="navbar-nav d-flex flex-column">
+                                                <li class="fw-bold">Personalization</li>
+                                                <li class="m-0 p-0"><hr></li>
+                                                <li class="nav-item fs-sm"><div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" role="switch" id="btn__theme">
+                                                    <label class="form-check-label" for="btn__theme">Theme Dark</label>
+                                                  </div>
+                                                </li>
+                                                <li class="fw-bold mt-4">About</li>
+                                                <li class="m-0 p-0"><hr></li>
+                                                <li class="nav-item mb-3 fs-sm">Social media</li>
+                                                <li class="nav-item">
+                                                    <div class="d-flex flex-wrap gap-3">
+                                                        <a class="btn btn-sm btn-primary rounded-pill d-inline-flex gap-2" href=""><i class="fs-sm bi bi-github"></i> GitHub</a>
+                                                        <a class="btn btn-sm btn-primary rounded-pill d-inline-flex gap-2" href=""><i class="fs-sm bi bi-instagram"></i> Instagram</a>
+                                                        <a class="btn btn-sm btn-primary rounded-pill d-inline-flex gap-2" href=""><i class="fs-sm bi bi-reddit"></i> Reddit</a>
+                                                        <a class="btn btn-sm btn-primary rounded-pill d-inline-flex gap-2" href=""><i class="fs-sm bi bi-youtube"></i> Youtube</a>
+                                                    </div>
+                                                </li>
+                                                <li class="nav-item fs-sm mt-4">Created by - <a href="https://pasabaa.github.io/portafolio/" target="_blank">pasabaa</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <ul class="navbar-nav d-flex flex-column gap-3">
+                                <li class="nav-item"><button class="btn btn-sm btn-light rounded-pill" id="btn-add">Add new event <i class="bi bi-plus"></i></button></li>
+                                <li class="nav-item"><button class="btn btn-sm btn-light rounded-pill">Download <i class="bi bi-download"></i></button></li>
+                            </ul>
+                        </div>
+                        <div class="col-8 p-4 timeline__content">
+                            <div class="timeline__header">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="badge bg-primary my-2" contenteditable="true">1995-2022</span>
+                                        <h1 class="fw-bold" contenteditable="true">Title of timeline</h1>
+                                        <p class="mt-3 text-muted timeline__description" contenteditable="true">Lorem ipsum
+                                            dolor sit amet consectetur adipisicing elit. Dicta ducimus explicabo aliquid cum
+                                            nesciunt perferendis eaque illo blanditiis praesentium accusantium?</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <img class="img-fluid rounded" src="https://picsum.photos/1920/1080" alt="">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="timeline__body py-4">
+                                <div class="d-flex gap-4 timeline__card--group">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
